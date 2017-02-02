@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-large">
+        Which of these applies to you?
+      </h1>
+
+      <form class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <label for="businesstrip" class="block-label">
+              <input id="businesstrip" type="radio" name="businesspage" value="businesstrip">
+              Business
+            </label>
+
+            <label for="academic" class="block-label">
+              <input id="academic" type="radio" name="businesspage" value="academic">
+              Academic
+            </label>
+
+            <label for="paid" class="block-label">
+              <input id="paid" type="radio" name="businesspage" value="paid">
+              Paid engagements
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="restrictions.html">Continue</a>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

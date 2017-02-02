@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-large">
+        Which of these do you have?
+      </h1>
+
+      <form class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <label for="ilr" class="block-label">
+              <input id="ilr" type="radio" name="resident" value="ilr">
+              Indefinite leave to remain
+            </label>
+
+            <label for="naturalisation" class="block-label">
+              <input id="naturalisation" type="radio" name="resident" value="naturalisation">
+              Naturalisation
+            </label>
+
+            <label for="abode" class="block-label">
+              <input id="abode" type="radio" name="resident" value="abode">
+              Right of abode
+            </label>
+
+            <label for="indefinite" class="block-label">
+              <input id="indefinite" type="radio" name="resident" value="indefinite">
+              EEA indefinite leave
+            </label>
+
+            <label for="ancestry" class="block-label">
+              <input id="ancestry" type="radio" name="resident" value="ancestry">
+              UK ancestry
+            </label>
+
+            <label for="eeafamily" class="block-label">
+              <input id="eeafamily" type="radio" name="resident" value="eeafamily">
+              EEA family permit
+            </label>
+
+            <label for="discretionary" class="block-label">
+              <input id="discretionary" type="radio" name="resident" value="discretionary">
+              Family member discretionary leave
+            </label>
+
+            <label for="protection" class="block-label">
+              <input id="protection" type="radio" name="resident" value="protection">
+              Humanitarian protection
+            </label>
+
+            <label for="outside" class="block-label">
+              <input id="outside" type="radio" name="resident" value="outside">
+              Leave outside the rules
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="restrictions.html">Continue</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
