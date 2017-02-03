@@ -13,10 +13,9 @@
       <a class="link-back" href="javascript:history.go(-1)">Back</a>
 
       <h1 class="heading-large">
-        Have you ever been convicted of a criminal offence, including spent convictions or cautioned by the police?
+        What is your gender as it appears on your passport?
       </h1>
-      <p>You don’t need to tell us about motoring fines or penalty points unless these were court imposed.</p>
-      <form action="/convictions-page" method="get" class="form">
+      <form class="form">
         <div class="form-group">
           <fieldset>
 
@@ -24,20 +23,24 @@
               Select which of these applies to you
             </legend>
 
-            <label for="yes" class="block-label">
-              <input id="yes" type="radio" name="convictions" value="yes">
-              Yes
+            <label for="male" class="block-label">
+              <input id="male" type="radio" name="gender" value="male">
+              Male
             </label>
 
-            <label for="no" class="block-label">
-              <input id="no" type="radio" name="convictions" value="no">
-              No
+            <label for="female" class="block-label">
+              <input id="female" type="radio" name="gender" value="female">
+              Female
             </label>
 
+            <label for="unspecified" class="block-label">
+              <input id="unspecified" type="radio" name="gender" value="unspecified">
+              Unspecified
+            </label>
           </fieldset>
         </div>
         <div class="form-group">
-          <input class="button" type="submit" value="Continue">
+          <a class="button" href="email">Continue</a>
         </div>
 
       </form>

@@ -13,10 +13,10 @@
       <a class="link-back" href="javascript:history.go(-1)">Back</a>
 
       <h1 class="heading-large">
-        Have you ever been refused entry to the UK or had restrictions imposed on your entry?
+        What is your passport number?
       </h1>
 
-      <form action="/restrictions-page" method="get" class="form">
+      <form class="form">
         <div class="form-group">
           <fieldset>
 
@@ -24,20 +24,12 @@
               Select which of these applies to you
             </legend>
 
-            <label for="yes" class="block-label">
-              <input id="yes" type="radio" name="restrictions" value="yes">
-              Yes
-            </label>
-
-            <label for="no" class="block-label">
-              <input id="no" type="radio" name="restrictions" value="no">
-              No
-            </label>
+            <input type="text" class="form-control" id="passport-number">
 
           </fieldset>
         </div>
         <div class="form-group">
-          <input class="button" type="submit" value="Continue">
+          <a class="button" href="passport-expire">Continue</a>
         </div>
 
       </form>

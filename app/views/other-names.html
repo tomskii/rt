@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-large">
+        Have you ever been officially or legally known by another name?
+      </h1>
+      <p>For example, you have changed your name by marriage or deed poll.</p>
+      <form class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              For example, you have changed your name by marriage or deed poll
+            </legend>
+
+            <label for="yes" class="block-label" data-target="add-other-names">
+              <input id="yes" type="radio" name="othernames" value="yes">
+              Yes
+            </label>
+
+            <label for="no" class="block-label">
+              <input id="no" type="radio" name="othernames" value="no">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="add-other-names">
+
+              <h2 class="heading-medium">
+                Your other name
+              </h2>
+
+              <fieldset>
+
+                <legend class="visuallyhidden">
+                  Your other name
+                </legend>
+
+                <div class="form-group">
+                  <label class="form-label-bold" for="address-line-1">Other surname</label>
+                  <span class="form-label">Enter this even if it hasn’t changed</span>
+                  <input class="form-control" type="text" id="address-line-1">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label-bold" for="address-line-1">Other given names</label>
+                  <span class="form-label">Include any middle names. Enter these even if they haven’t changed</span>
+                  <input class="form-control" type="text" id="address-line-1">
+                </div>
+
+              </fieldset>
+
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="date-of-birth">Continue</a>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

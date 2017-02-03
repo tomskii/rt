@@ -99,7 +99,6 @@ if (workvisa === 'no') {
    }
 })
 
-
 router.get('/restrictions-page', function (req, res) {
   var restrictions = req.query.restrictions
 
@@ -110,6 +109,24 @@ if (restrictions === 'yes') {
    }
 })
 
+router.get('/convictions-page', function (req, res) {
+  var convictions = req.query.convictions
 
+if (convictions === 'yes') {
+   res.redirect('ineligible-restrictions')
+ } else {
+     res.render('penalties')
+   }
+})
+
+router.get('/penalties-page', function (req, res) {
+  var penalties = req.query.penalties
+
+if (penalties === 'yes') {
+   res.redirect('ineligible-restrictions')
+ } else {
+     res.render('passport-number')
+   }
+})
 
 module.exports = router
