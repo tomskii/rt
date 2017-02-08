@@ -41,6 +41,16 @@ if (businessvisa === 'no') {
    }
 })
 
+router.get('/business-novisa', function (req, res) {
+  var businessnovisa = req.query.businessnovisa
+
+if (businessnovisa === 'paid') {
+   res.redirect('ineligible')
+ } else {
+     res.render('restrictions')
+   }
+})
+
 // router.get('/business-page', function (req, res) {
 //  var businesspage = req.query.businesspage
 
@@ -128,5 +138,16 @@ if (penalties === 'yes') {
      res.render('passport-number')
    }
 })
+
+//router.get('/inputemail', function (req, res) {
+//    var email = req.query['email'];
+//    res.render('check-your-answers', {email:email});
+//});
+
+//router.get('/inputname', function (req, res) {
+//    var surname = req.query['surname'];
+//    var givennames = req.query['givennames'];
+//    res.render('check-your-answers', {surname:surname, givennames:givennames});
+//});
 
 module.exports = router

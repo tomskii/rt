@@ -11,18 +11,18 @@
     <div class="column-two-thirds">
 
       <a class="link-back" href="javascript:history.go(-1)">Back</a>
-
+      <form action="/inputname" method="get" class="form" name="test-form">
       <h1 class="heading-large">
         What is your full name as it is written in your passport?
       </h1>
         <div class="form-group">
             <label class="form-label-bold" for="surname">Surname</label>
-            <input type="text" class="form-control" id="surname">
+            <input type="text" class="form-control" id="surname" name="surname">
         </div>
         <div class="form-group">
             <label class="form-label-bold" for="givennames">Given names</label>
             <span class="form-label">Including any middle names</span>
-            <input type="text" class="form-control" id="givennames">
+            <input type="text" class="form-control" id="givennames" name="givennames">
         </div>
         <div class="form-group">
           <details>
@@ -35,7 +35,7 @@
           </details>
         </div>
         <div class="form-group">
-          <a class="button" href="other-names">Continue</a>
+          <a href="date-of-birth.html" class="button">Continue</a>
         </div>
 
     </div>

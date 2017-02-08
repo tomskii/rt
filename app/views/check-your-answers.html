@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Check your details before continuing
+  </h1>
+
+<div class="form-group">
+  <div class="playback-container" name="test-form">
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="2">
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>
+          Passport nationality
+        </td>
+        <td class="playback-cell" data-playback="">
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Passport nationality</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Visa or permit
+        </td>
+        <td class="playback-cell" data-playback="visa">
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Visa or permit</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          UK Custom
+        </td>
+        <td class="playback-cell" data-playback="">
+{{ custom }}
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">UK Custom</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          UK Immigration
+        </td>
+        <td class="playback-cell" data-playback="">
+{{ immigration }}
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">UK Immigration</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Criminal convictions
+        </td>
+        <td class="playback-cell" data-playback="">
+{{ convictions }}
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Criminal convictions</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Passport number
+        </td>
+        <td class="playback-cell" data-playback="passport-number">
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Passport number</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Expiry date
+        </td>
+        <td><span class="playback-cell" data-playback="exp-day"></span>/<span class="playback-cell" data-playback="exp-month"></span>/<span class="playback-cell" data-playback="exp-year"></span>
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Expiry date</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Full name
+        </td>
+        <td><span class="playback-cell" data-playback="givennames"></span> <span class="playback-cell" data-playback="surname"></span>
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Full name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Other names
+        </td>
+        <td class="playback-cell" data-playback="">{{ givennames }} {{ surname }}
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Other names</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Date of birth
+        </td>
+        <td><span class="playback-cell" data-playback="dob-day"></span>/<span class="playback-cell" data-playback="dob-month"></span>/<span class="playback-cell" data-playback="dob-year">
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Date of birth</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Gender
+        </td>
+        <td class="playback-cell" data-playback="gender">
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Gender</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Email address
+        </td>
+        <td class="playback-cell" data-playback="email">
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Email address</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+  <div class="form-group">
+    <a href="confirmation-page" class="button">Confirm submission</a>
+  </div>
+
+</main>
+
+{% endblock %}
