@@ -8,4 +8,12 @@ $( document ).ready(function() {
   $('form').storeForm();
   //play back from local storage
   $('.playback-container').getForm();
+
+  //clear storage
+  $('.clearStorage').click(function(){
+    localStorage.clear();
+  });
+  //uncheck inputs
+  $('input[type=checkbox]').removeAttr('checked');
+  $('input[type=radio]').removeAttr('checked');
 });
