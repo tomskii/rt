@@ -28,3 +28,43 @@ $path: "/public/images/";
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.ui-autocomplete {
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  width: 218px;
+  border: 1px solid #B0BECA;
+  max-height: 350px;
+  overflow-x: hidden;
+  font-size: 19px;
+}
+.ui-autocomplete .ui-menu-item {
+  border-top: 1px solid #B0BECA;
+  display: block;
+  padding: 4px 6px;
+  color: #353D44;
+  cursor: pointer;
+}
+.ui-autocomplete .ui-menu-item:first-child {
+  border-top: none;
+}
+.ui-autocomplete .ui-menu-item.ui-state-focus {
+  background-color: #D5E5F4;
+  color: #161A1C;
+}
+.ui-helper-hidden-accessible {display: none}
+.check-name-field {
+    width: 80%;
+    font-weight: 400;
+    padding: 6px;
+}
+.countryHint p {
+    padding: 0 0 15px 10px;
+    font-weight: bold;
+}
+.countryHint {
+    border-left: 8px #B10E1E solid;
+    padding: 10px 0 0px;
+    color: #B10E1E;
+}

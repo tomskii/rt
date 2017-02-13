@@ -16,4 +16,27 @@ $( document ).ready(function() {
   //uncheck inputs
   $('input[type=checkbox]').removeAttr('checked');
   $('input[type=radio]').removeAttr('checked');
+
+  (function($){
+    $(function(){
+      $('#country-selector').val('');
+      $("form").submit(function( event ) {
+        var selectValue = $('#country-selector').val();
+        if (_.includes(['Hong Kong', 'Japan', 'Malaysia', 'Singapore',
+              'Korea, Republic of', 'Taiwan', 'Brunei Darussalam', 'Israel', 'Canada', 'United States', 'Argentina',
+              'Belize', 'Brazil', 'Chile', 'El Salvador', 'Guatemala', 'Honduras', 'Mexico',
+              'Nicaragua', 'Panama', 'Paraguay', 'Uruguay', 'Australia', 'New Zealand'], selectValue)){
+          window.location.href = 'why-are-you-coming.html';
+          event.preventDefault();
+        } else if (_.includes([''], selectValue)){
+          $(".countryHint").show();
+          event.preventDefault();
+        } else {
+          window.location.href = 'ineligible.html';
+          event.preventDefault();
+        }
+      });
+      $('select').selectToAutocomplete();
+    });
+  })(jQuery);
 });
