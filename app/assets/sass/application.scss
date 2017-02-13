@@ -54,11 +54,21 @@ $path: "/public/images/";
   color: #161A1C;
 }
 .ui-helper-hidden-accessible {display: none}
-.check-name-field {
-    width: 80%;
+
+.form-control.check-name-field {
+    width: 100%;
     font-weight: 400;
     padding: 6px;
 }
+
+@media (min-width: 641px){
+.form-control.check-name-field {
+    width: 80%;
+    font-weight: 400;
+    padding: 6px;
+}}
+
+
 .countryHint p {
     padding: 0 0 15px 10px;
     font-weight: bold;
