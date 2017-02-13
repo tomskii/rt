@@ -20,7 +20,7 @@ $( document ).ready(function() {
   (function($){
     $(function(){
       $('#country-selector').val('');
-      $("form").submit(function( event ) {
+      $("#countries").submit(function( event ) {
         var selectValue = $('#country-selector').val();
         if (_.includes(['Hong Kong', 'Japan', 'Malaysia', 'Singapore',
               'Korea, Republic of', 'Taiwan', 'Brunei Darussalam', 'Israel', 'Canada', 'United States', 'Argentina',
