@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        What will you be doing in the UK?
+      </h1>
+
+      <form action="/business-novisa" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <label for="businesstrip" class="block-label">
+              <input id="businesstrip" type="radio" name="businessnovisa" value="businesstrip">
+              Attending a business conference, meeting or training paid for by your company
+            </label>
+
+            <label for="academic" class="block-label">
+              <input id="academic" type="radio" name="businessnovisa" value="academic">
+              Academic research or accompanying students on a study abroad program
+            </label>
+
+            <label for="paid" class="block-label">
+              <input id="paid" type="radio" name="businessnovisa" value="paid">
+              Carrying out work or permitted engagements paid for by a UK-based company
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

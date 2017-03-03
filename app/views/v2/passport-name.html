@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+      <form action="/inputname" method="get" class="form" name="test-form">
+      <h1 class="heading-medium">
+        What is your full name as it is written in your passport?
+      </h1>
+        <div class="form-group">
+            <label class="form-label-bold" for="givennames">First and middle names</label>
+            <input type="text" class="form-control" id="givennames" name="givennames">
+        </div>
+        <div class="form-group">
+            <label class="form-label-bold" for="surname">Last name</label>
+            <input type="text" class="form-control" id="surname" name="surname">
+        </div>
+        <!--<div class="form-group">
+          <details>
+            <summary><span class="summary">Help with given names</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>
+                I'm sure we've got some content for this.
+              </p>
+            </div>
+          </details>
+        </div>-->
+        <div class="form-group">
+          <a href="date-of-birth.html" class="button">Continue</a>
+        </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

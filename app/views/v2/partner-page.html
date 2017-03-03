@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Which of these applies to you?
+      </h1>
+
+      <form action="/partner-page" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <label for="british" class="block-label">
+              <input id="british" type="radio" name="partnerpage" value="british">
+               Spouse or civil partner of a British citizen
+            </label>
+
+            <label for="eea" class="block-label">
+              <input id="eea" type="radio" name="partnerpage" value="eea">
+              Spouse or civil partner of an EEA citizen
+            </label>
+
+            <label for="visa" class="block-label">
+              <input id="visa" type="radio" name="partnerpage" value="visa">
+               Spouse or partner of someone with a UK visa
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

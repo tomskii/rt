@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Why are you coming to the UK?
+      </h1>
+
+      <form action="/eligible" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+                Select which of these applies to you
+            </legend>
+
+            <label for="businesswork" class="block-label">
+              <input id="businesswork" type="radio" name="answer" value="businesswork">
+              Business visit or to work
+            </label>
+
+            <label for="tourism" class="block-label">
+              <input id="tourism" type="radio" name="answer" value="tourism">
+              Tourism (including visiting family or friends)
+            </label>
+
+            <label for="academicstudy" class="block-label">
+              <input id="academicstudy" type="radio" name="answer" value="academicstudy">
+              Academic visit or to study
+            </label>
+
+            <label for="resident" class="block-label">
+              <input id="resident" type="radio" name="answer" value="resident">
+              I'm a resident in the UK
+            </label>
+
+            <label for="partner" class="block-label">
+              <input id="partner" type="radio" name="answer" value="partner">
+              Join partner for a long stay
+            </label>
+
+            <label for="transit" class="block-label">
+              <input id="transit" type="radio" name="answer" value="transit">
+              Passing through the UK (in transit)
+            </label>
+
+            <label for="diplomat" class="block-label">
+              <input id="diplomat" type="radio" name="answer" value="diplomatv2">
+              Official diplomatic, government or military business
+            </label>
+
+            <label for="medical" class="block-label">
+              <input id="medical" type="radio" name="answer" value="medical">
+              Private medical treatment
+            </label>
+
+            <label for="married" class="block-label">
+              <input id="married" type="radio" name="answer" value="married">
+              Get married or enter into a civil partnership
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

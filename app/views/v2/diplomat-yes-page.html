@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        What type of organisation are you coming to the UK with?
+      </h1>
+
+      <form action="/v2/diplomat-yes-page-form-v2" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <label for="exempt" class="block-label">
+              <input id="exempt" type="radio" name="diplomatyespageformv2" value="exempt">
+              I’m with an exempt organisation
+            </label>
+
+            <label for="mission" class="block-label">
+              <input id="mission" type="radio" name="diplomatyespagev2" value="mission">
+              I’m with a diplomatic mission or household
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="restrictions.html">Continue</a>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

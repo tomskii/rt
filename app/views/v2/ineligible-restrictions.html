@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        You are not eligible for the Registered Traveller Service
+      </h1>
+
+      <p>The Registered Traveller Service is not open to people who have ever:</p>
+      <ul class="list list-bullet">
+        <li>been refused entry to the UK</li>
+        <li>had conditions imposed on their entry to the UK</li>
+        <li>had action taken against them for breaking customs laws</li>
+        <li>had a criminal conviction, including spent convictions or police caution</li>
+      </ul>
+
+      <p>You can still <a href="https://www.gov.uk/browse/visas-immigration">enter the UK in the normal way</a>.</p>
+
+      <a href="http://www.gov.uk" class="button" role="button">Exit to GOV.UK </a>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

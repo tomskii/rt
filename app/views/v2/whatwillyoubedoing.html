@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        What will you be doing in the UK?
+      </h1>
+
+      <form action="/v2/what-will-you-be-doing" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <label for="attending" class="block-label">
+              <input id="attending" type="radio" name="whatwillyoubedoingpage" value="attending">
+              Attending a business conference, meeting or training
+            </label>
+
+            <label for="carrying" class="block-label">
+              <input id="carrying" type="radio" name="whatwillyoubedoingpage" value="carrying">
+              Carrying out work or permitted engagements paid for by a UK based company
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Which visa do you have?
+      </h1>
+
+      <form class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <label for="tier1" class="block-label">
+              <input id="tier1" type="radio" name="businessworkpage" value="tier1">
+              Tier 1
+            </label>
+
+            <label for="tier2" class="block-label">
+              <input id="tier2" type="radio" name="businessworkpage" value="tier4">
+              Tier 2
+            </label>
+
+            <label for="tier5" class="block-label">
+              <input id="tier5" type="radio" name="businessworkpage" value="tier5">
+              Tier 5 (excluding creative or sporting concessions)
+            </label>
+
+            <label for="solerepresentative" class="block-label">
+              <input id="solerepresentative" type="radio" name="businessworkpage" value="solerepresentative">
+              Sole representative
+            </label>
+
+            <label for="ministerofreligion" class="block-label">
+              <input id="ministerofreligion" type="radio" name="businessworkpage" value="ministerofreligion">
+              Minister of religion
+            </label>
+
+            <label for="civiliancontractor" class="block-label">
+              <input id="civiliancontractor" type="radio" name="businessworkpage" value="civiliancontractor">
+              Civilian contractor
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="restrictions.html">Continue</a>
+        </div>
+<!-- this is a comment to get a commit -->
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

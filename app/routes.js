@@ -16,6 +16,10 @@ if (answer === 'married') {
    res.redirect('ineligible')
  } else if (answer === 'business') {
    res.redirect('business-visa')
+ } else if (answer === 'businesswork') {
+   res.redirect('/v2/businesswork-visa')
+ } else if (answer === 'academicstudy') {
+   res.redirect('/v2/academicstudy-visa')
  } else if (answer === 'resident') {
    res.redirect('resident')
  } else if (answer === 'partner') {
@@ -26,6 +30,8 @@ if (answer === 'married') {
    res.redirect('work-visa')
  } else if (answer === 'diplomat') {
    res.redirect('diplomat-visa')
+ } else if (answer === 'diplomatv2') {
+   res.redirect('/v2/diplomat-visa')
  } else {
      res.render('restrictions')
    }
@@ -138,6 +144,95 @@ if (penalties === 'yes') {
      res.render('passport-number')
    }
 })
+
+// start of businesswork-visa.html logic
+
+router.get('/v2/businesswork-gotvisa', function (req, res) {
+  var businessworkvisa = req.query.businessworkvisa
+
+if (businessworkvisa === 'yes') {
+   res.redirect('/v2/businesswork-whichvisa')
+ } else {
+     res.render('v2/businesswork-novisa')
+   }
+})
+
+// end of businesswork-visa.html logic
+
+
+router.get('/v2/businesswork-novisa', function (req, res) {
+  var businessworknovisa = req.query.businessworknovisa
+
+if (businessworkvisa === 'no') {
+   res.redirect('v2/whatwillyoubedoing')
+ } else {
+     res.render('v2/ineligible')
+   }
+})
+
+router.get('/v2/businesswork-6months', function (req, res) {
+  var businesswork6months = req.query.businesswork6months
+
+if (businesswork6months === 'no') {
+   res.redirect('/v2/whatwillyoubedoing')
+ } else {
+     res.render('v2/ineligible')
+   }
+})
+
+router.get('/v2/what-will-you-be-doing', function (req, res) {
+  var whatwillyoubedoingpage = req.query.whatwillyoubedoingpage
+
+if (whatwillyoubedoingpage === 'attending') {
+   res.redirect('/v2/restrictions')
+ } else {
+     res.render('v2/ineligible')
+   }
+})
+
+// start of academicstudy-visa.html logic
+
+router.get('/v2/academicstudy-visapage', function (req, res) {
+  var academicstudyvisapage = req.query.academicstudyvisapage
+
+if (academicstudyvisapage === 'yes') {
+   res.redirect('restrictions')
+ } else {
+     res.render('v2/academicstudy-novisa')
+   }
+})
+
+router.get('/v2/academicstudy-6months', function (req, res) {
+  var academicstudy6months = req.query.academicstudy6months
+
+if (academicstudy6months === 'no') {
+   res.redirect('/v2/whatwillyoubedoing-academic')
+ } else {
+     res.render('v2/ineligible')
+   }
+})
+
+router.get('/v2/what-will-you-be-doing-academic', function (req, res) {
+  var whatwillyoubedoingacademic = req.query.whatwillyoubedoingacademic
+
+if (whatwillyoubedoingacademic === 'research') {
+   res.redirect('/v2/restrictions')
+ } else {
+     res.render('v2/ineligible')
+   }
+})
+
+router.get('/diplomat-gotvisav2', function (req, res) {
+  var diplomatvisav2 = req.query.diplomatvisav2
+
+if (diplomatvisav2 === 'no') {
+   res.redirect('/v2/diplomat-yes-page')
+ } else {
+   res.render('restrictions')
+   }
+})
+// end of academicstudy-visa.html logic
+
 
 //router.get('/inputemail', function (req, res) {
 //    var email = req.query['email'];
