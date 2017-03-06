@@ -218,7 +218,7 @@ router.get('/v2/what-will-you-be-doing-academic', function (req, res) {
 if (whatwillyoubedoingacademic === 'research') {
    res.redirect('/v2/restrictions')
  } else {
-     res.render('v2/ineligible')
+     res.render('v2/restrictions')
    }
 })
 
@@ -226,7 +226,7 @@ router.get('/diplomat-gotvisav2', function (req, res) {
   var diplomatvisav2 = req.query.diplomatvisav2
 
 if (diplomatvisav2 === 'no') {
-   res.redirect('/v2/diplomat-yes-page')
+   res.redirect('/v2/diplomat-no-page')
  } else {
    res.render('restrictions')
    }
