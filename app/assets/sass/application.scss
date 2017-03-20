@@ -14,7 +14,7 @@ $path: "/public/images/";
 .govuk-related-items {
   margin-top: $gutter;
   border-top: 10px solid $govuk-blue;
-  padding-top: 5px;
+  padding-top: 5px;}
 
   .heading-medium {
     margin-top: 0.3em;
@@ -77,4 +77,22 @@ $path: "/public/images/";
     border-left: 8px #B10E1E solid;
     padding: 10px 0 0px;
     color: #B10E1E;
+}
+.notice .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -17px;
+}
+
+.icon-important {
+    width: 35px;
+    height: 35px;
+    background-image: url(/public/images/icon-important.png);
+}
+
+.icon {
+    display: inline-block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
 }
