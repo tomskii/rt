@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Why is your child coming to the UK with you?
+      </h1>
+
+      <form action="/eligible" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+                Select which of these applies to you
+            </legend>
+
+            <label for="kidstourism" class="block-label">
+              <input id="kidstourism" type="radio" name="answer" value="kidstourism">
+              Tourism (including visiting family or friends)
+            </label>
+
+            <label for="kidsresident" class="block-label">
+              <input id="kidsresident" type="radio" name="answer" value="kidsresident">
+              They are a resident in the UK
+            </label>
+
+            <label for="kidsstudy" class="block-label">
+              <input id="kidsstudy" type="radio" name="answer" value="kidsstudy">
+              To study
+            </label>
+
+            <label for="kidstransit" class="block-label">
+              <input id="kidstransit" type="radio" name="answer" value="kidstransit">
+              Passing through the UK (in transit)
+            </label>
+
+            <label for="kidsdiplomatic" class="block-label">
+              <input id="kidsdiplomatic" type="radio" name="answer" value="kidsdiplomatic">
+              As a member of a diplomatic household
+            </label>
+
+            <label for="kidsmedical" class="block-label">
+              <input id="kidsmedical" type="radio" name="answer" value="kidsmedical">
+              For private medical treatment
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

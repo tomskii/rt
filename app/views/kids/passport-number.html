@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        What is your child’s passport number?
+      </h1>
+      <p>Use the number on their passport photo page, include any zeros at the start</p>
+      <form class="form" name="test-form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <input type="text" class="form-control" id="passport-number" name="passport-number">
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <label class="heading-medium">When does your child’s passport expire?</label>
+            <div class="form-date">
+              <p>For example, 30 04 2024</p>
+              <div class="form-group form-group-day">
+                <label for="exp-day">Day</label>
+                <input class="form-control" id="exp-day" name="exp-day" type="number" pattern="[0-9]*" min="0" max="31">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="exp-month">Month</label>
+                <input class="form-control" id="exp-month" name="exp-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="exp-year">Year</label>
+                <input class="form-control" id="exp-year" name="exp-year" type="number" pattern="[0-9]*" min="0" max="2014">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+        <div class="form-group">
+          <a class="button" href="passport-name">Continue</a>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

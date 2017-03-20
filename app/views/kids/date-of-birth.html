@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        What is your child's date of birth as written in their passport?
+      </h1>
+
+      <form class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <div class="form-date">
+
+              <p>For example, 11 06 2005</p>
+
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input class="form-control" id="w" type="number" pattern="[0-9]*" min="0" max="31">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+              </div>
+            </div>
+
+          </fieldset>
+
+          <h1 class="heading-medium">
+          What is your child's gender as written in their passport?
+          </h1>
+
+            <div class="form-group">
+              <fieldset>
+
+                <legend class="visuallyhidden">
+                  Select which of these applies to you
+                </legend>
+
+                <label for="male" class="block-label">
+                  <input id="male" type="radio" name="gender" value="male">
+                  Male
+                </label>
+
+                <label for="female" class="block-label">
+                  <input id="female" type="radio" name="gender" value="female">
+                  Female
+                </label>
+
+                <label for="unspecified" class="block-label">
+                  <input id="unspecified" type="radio" name="gender" value="unspecified">
+                  Unspecified
+                </label>
+              </fieldset>
+            </div>
+
+        </div>
+        <div class="form-group">
+          <a class="button" href="gender">Continue</a>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

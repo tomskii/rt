@@ -32,6 +32,19 @@ if (answer === 'married') {
    res.redirect('diplomat-visa')
  } else if (answer === 'diplomatv2') {
    res.redirect('/v2/diplomat-visa')
+
+ } else if (answer === 'kidstourism') {
+   res.redirect('/kids/kidsrestrictions')
+
+ } else if (answer === 'kidstransit') {
+   res.redirect('/kids/kidsrestrictions')
+
+ } else if (answer === 'kidsmedical') {
+   res.redirect('/kids/kidsrestrictions')
+
+ } else if (answer === 'kidsstudy') {
+   res.redirect('/kids/study-visa')
+
  } else {
      res.render('restrictions')
    }
@@ -233,6 +246,15 @@ if (diplomatvisav2 === 'no') {
 })
 // end of academicstudy-visa.html logic
 
+router.get('/kids/study-gotvisa', function (req, res) {
+  var kidsstudyvisa = req.query.kidsstudyvisa
+
+if (kidsstudyvisa === 'no') {
+   res.redirect('/kids/ineligible')
+ } else {
+   res.render('kids/kidsrestrictions')
+   }
+})
 
 //router.get('/inputemail', function (req, res) {
 //    var email = req.query['email'];
