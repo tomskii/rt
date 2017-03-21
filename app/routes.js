@@ -45,6 +45,12 @@ if (answer === 'married') {
  } else if (answer === 'kidsstudy') {
    res.redirect('/kids/study-visa')
 
+ } else if (answer === 'kidsresident') {
+   res.redirect('/kids/resident-visa')
+
+ } else if (answer === 'kidsdiplomatic') {
+   res.redirect('/kids/kidsrestrictions')
+
  } else {
      res.render('restrictions')
    }
@@ -246,6 +252,7 @@ if (diplomatvisav2 === 'no') {
 })
 // end of academicstudy-visa.html logic
 
+// kids study visa logic
 router.get('/kids/study-gotvisa', function (req, res) {
   var kidsstudyvisa = req.query.kidsstudyvisa
 
@@ -255,6 +262,30 @@ if (kidsstudyvisa === 'no') {
    res.render('kids/kidsrestrictions')
    }
 })
+
+// kids resident visa laogic
+router.get('/kids/resident-gotvisa', function (req, res) {
+  var kidsresidentvisa = req.query.kidsresidentvisa
+
+if (kidsresidentvisa === 'no') {
+   res.redirect('/kids/resident-gotvisa-no')
+ } else {
+   res.render('kids/resident-gotvisa-yes')
+   }
+})
+
+router.get('/kids/kids-restrictions-page', function (req, res) {
+  // get the answer from the query string (eg. ?answer=a)
+  var convictions = req.query.convictions
+
+if (convictions === 'yes') {
+   res.redirect('ineligible')
+
+ } else {
+     res.render('kids/passport-number')
+   }
+})
+
 
 //router.get('/inputemail', function (req, res) {
 //    var email = req.query['email'];

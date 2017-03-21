@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Which of these have they got?
+      </h1>
+
+      <form action="/kids/resident-gotvisa-no" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+                Select which of these applies to you
+            </legend>
+
+            <label for="ilr" class="block-label">
+              <input id="ilr" type="radio" name="residentgotvisano" value="ilr">
+              ILR
+            </label>
+
+            <label for="naturalisation" class="block-label">
+              <input id="naturalisation" type="radio" name="residentgotvisano" value="naturalisation">
+              Naturalisation
+            </label>
+
+            <label for="roa" class="block-label">
+              <input id="roa" type="radio" name="residentgotvisano" value="roa">
+              Right of Abode
+            </label>
+
+            <label for="eea" class="block-label">
+              <input id="eea" type="radio" name="residentgotvisano" value="eea">
+              EEA Indefinite Leave
+            </label>
+
+            <label for="deptier124" class="block-label">
+              <input id="deptier124" type="radio" name="residentgotvisano" value="deptier124">
+            Dependent of Tier 1, 2 or 4
+            </label>
+
+            <label for="deptier5" class="block-label">
+              <input id="deptier5" type="radio" name="residentgotvisano" value="deptier5">
+              Dependent of Tier 1, 2 or 4
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="kidsrestrictions">Continue</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

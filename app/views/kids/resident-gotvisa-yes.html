@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Which of these have they got?
+      </h1>
+
+      <form action="/kids/resident-gotvisa-yes" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+                Select which of these applies to you
+            </legend>
+
+            <label for="ancestry" class="block-label">
+              <input id="ancestry" type="radio" name="residentgotvisayes" value="ancestry">
+              Dependent of UK Ancestry
+            </label>
+
+            <label for="othervisa" class="block-label">
+              <input id="othervisa" type="radio" name="residentgotvisayes" value="othervisa">
+              Other visa
+            </label>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="kidsrestrictions">Continue</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
